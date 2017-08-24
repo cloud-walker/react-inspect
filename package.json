@@ -1,0 +1,32 @@
+{
+  "name": "@cloudwalker/react-inspect",
+  "version": "0.0.0",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9000 -c .storybook"
+  },
+  "jsnext:main": "dist/react-inspect.es.js",
+  "module": "dist/react-inspect.es.js",
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=15"
+  },
+  "author": "Luca Barone <baro.luc@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-walker/react-inspect"
+  },
+  "bugs": {
+    "url": "https://github.com/cloud-walker/react-inspect/issues"
+  },
+  "keywords": [
+    "react",
+    "inspect",
+    "log",
+    "json",
+    "stringify"
+  ]
+}
