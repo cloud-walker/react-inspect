@@ -28,5 +28,13 @@
     "log",
     "json",
     "stringify"
-  ]
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/react": "^3.2.8",
+    "prettier": "^1.5.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sanitize.css": "^5.0.0"
+  }
 }
