@@ -10,10 +10,6 @@
   },
   "jsnext:main": "dist/react-inspect.es.js",
   "module": "dist/react-inspect.es.js",
-  "peerDependencies": {
-    "prop-types": ">=15",
-    "react": ">=15"
-  },
   "author": "Luca Barone <baro.luc@gmail.com>",
   "repository": {
     "type": "git",
@@ -22,14 +18,11 @@
   "bugs": {
     "url": "https://github.com/cloud-walker/react-inspect/issues"
   },
-  "keywords": [
-    "react",
-    "inspect",
-    "log",
-    "json",
-    "stringify"
-  ],
-  "dependencies": {},
+  "keywords": ["react", "inspect", "log", "json", "stringify"],
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=15"
+  },
   "devDependencies": {
     "@storybook/react": "^3.2.8",
     "prettier": "^1.5.3",
