@@ -1,9 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReactInspect component should render properly 1`] = `
+exports[`ReactInspect component should render properly if data is a function 1`] = `<pre />`;
+
+exports[`ReactInspect component should render properly if data is a number 1`] = `
+<pre>
+  666
+</pre>
+`;
+
+exports[`ReactInspect component should render properly if data is a string 1`] = `
+<pre>
+  "cawabongaaa!"
+</pre>
+`;
+
+exports[`ReactInspect component should render properly if data is an array 1`] = `
+<pre>
+  [
+  null,
+  null,
+  666,
+  "cawabongaaa!",
+  null
+]
+</pre>
+`;
+
+exports[`ReactInspect component should render properly if data is an object 1`] = `
 <pre>
   {
-  "foo": "bar"
+  "nil": null,
+  "num": 666,
+  "str": "cawabongaaa!",
+  "arr": [
+    null,
+    null,
+    666,
+    "cawabongaaa!",
+    null
+  ],
+  "obj": {
+    "nil": null,
+    "num": 666,
+    "str": "cawabongaaa!",
+    "arr": [
+      null,
+      null,
+      666,
+      "cawabongaaa!",
+      null
+    ]
+  }
 }
 </pre>
 `;
+
+exports[`ReactInspect component should render properly if data is null 1`] = `
+<pre>
+  null
+</pre>
+`;
+
+exports[`ReactInspect component should render properly if data is undefined 1`] = `<pre />`;
