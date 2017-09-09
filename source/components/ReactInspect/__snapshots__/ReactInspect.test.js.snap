@@ -36,6 +36,38 @@ exports[`ReactInspect component should render properly if data is an array 1`] =
   <styled.span>
     [
   </styled.span>
+  <styled.div>
+    <styled.span>
+      undefined
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      null
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      666
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      "
+      cawabongaaa!
+      "
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+    </styled.span>
+  </styled.div>
   <styled.span>
     ]
   </styled.span>
@@ -126,6 +158,38 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       <styled.span>
         [
       </styled.span>
+      <styled.div>
+        <styled.span>
+          undefined
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          null
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          666
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          "
+          cawabongaaa!
+          "
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+        </styled.span>
+      </styled.div>
       <styled.span>
         ]
       </styled.span>
@@ -222,6 +286,38 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           <styled.span>
             [
           </styled.span>
+          <styled.div>
+            <styled.span>
+              undefined
+            </styled.span>
+          </styled.div>
+          <styled.div>
+            <styled.span>
+              null
+            </styled.span>
+          </styled.div>
+          <styled.div>
+            <styled.span>
+              666
+            </styled.span>
+          </styled.div>
+          <styled.div>
+            <styled.span>
+              "
+              cawabongaaa!
+              "
+            </styled.span>
+          </styled.div>
+          <styled.div>
+            <styled.span>
+              function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+            </styled.span>
+          </styled.div>
           <styled.span>
             ]
           </styled.span>
