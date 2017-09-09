@@ -2,23 +2,9 @@ import React from 'react'
 import {shallow} from 'enzyme'
 
 import Component from './index'
+import data, {arr, nil, num, fun, und, str} from './dataMock'
 
 const subject = shallow(<Component />)
-const und = undefined
-const nil = null
-const num = 666
-const str = 'cawabongaaa!'
-const fun = a => {
-  const b = 2
-
-  console.log('foooooo')
-  return a + b
-}
-const obj = {und, nil, num, str, fun}
-const arr = Object.values(obj)
-
-obj.arr = arr
-obj.obj = Object.assign({}, obj)
 
 describe(`${Component.displayName} component`, () => {
   it('should render properly if data is undefined', () => {
@@ -50,7 +36,7 @@ describe(`${Component.displayName} component`, () => {
   })
 
   it('should render properly if data is an object', () => {
-    subject.setProps({data: obj})
+    subject.setProps({data: data})
 
     expect(subject).toMatchSnapshot()
   })

@@ -1,8 +1,9 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import Component from './react-inspect'
+import data from './dataMock'
+import Component from './index'
 
 storiesOf(Component.displayName, module).add('default', () =>
-  <Component data={{foo: 'bar', baz: 'doo'}} />,
+  <Component data={data} />,
 )
