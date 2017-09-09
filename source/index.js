@@ -1,1 +1,1 @@
-export {default} from './ReactInspect'
+export {default} from './components/ReactInspect'
