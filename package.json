@@ -6,7 +6,13 @@
     "access": "public"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9000 -c .storybook"
+    "storybook": "start-storybook -p 9000 -c .storybook",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "jsnext:main": "dist/react-inspect.es.js",
   "module": "dist/react-inspect.es.js",
@@ -18,16 +24,29 @@
   "bugs": {
     "url": "https://github.com/cloud-walker/react-inspect/issues"
   },
-  "keywords": ["react", "inspect", "log", "json", "stringify"],
+  "keywords": [
+    "react",
+    "inspect",
+    "log",
+    "json",
+    "stringify"
+  ],
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
   },
   "devDependencies": {
     "@storybook/react": "^3.2.8",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "jest": "^21.0.2",
     "prettier": "^1.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "sanitize.css": "^5.0.0"
   }
 }
