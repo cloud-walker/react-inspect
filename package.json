@@ -48,5 +48,9 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "sanitize.css": "^5.0.0"
+  },
+  "dependencies": {
+    "ramda": "^0.24.1",
+    "styled-components": "^2.1.2"
   }
 }

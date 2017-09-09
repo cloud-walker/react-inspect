@@ -1,64 +1,255 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReactInspect component should render properly if data is a function 1`] = `<pre />`;
+exports[`ReactInspect component should render properly if data is a function 1`] = `
+<styled.pre>
+  <styled.span>
+    function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+  </styled.span>
+</styled.pre>
+`;
 
 exports[`ReactInspect component should render properly if data is a number 1`] = `
-<pre>
-  666
-</pre>
+<styled.pre>
+  <styled.span>
+    666
+  </styled.span>
+</styled.pre>
 `;
 
 exports[`ReactInspect component should render properly if data is a string 1`] = `
-<pre>
-  "cawabongaaa!"
-</pre>
+<styled.pre>
+  <styled.span>
+    "
+    cawabongaaa!
+    "
+  </styled.span>
+</styled.pre>
 `;
 
 exports[`ReactInspect component should render properly if data is an array 1`] = `
-<pre>
-  [
-  null,
-  null,
-  666,
-  "cawabongaaa!",
-  null
-]
-</pre>
+<styled.pre>
+  <styled.span>
+    [
+  </styled.span>
+  <styled.span>
+    ]
+  </styled.span>
+</styled.pre>
 `;
 
 exports[`ReactInspect component should render properly if data is an object 1`] = `
-<pre>
-  {
-  "nil": null,
-  "num": 666,
-  "str": "cawabongaaa!",
-  "arr": [
-    null,
-    null,
-    666,
-    "cawabongaaa!",
-    null
-  ],
-  "obj": {
-    "nil": null,
-    "num": 666,
-    "str": "cawabongaaa!",
-    "arr": [
-      null,
-      null,
-      666,
-      "cawabongaaa!",
+<styled.pre>
+  <styled.span>
+    {
+  </styled.span>
+  <styled.div>
+    <styled.span>
+      und
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <styled.span>
+      undefined
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      nil
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <styled.span>
       null
-    ]
-  }
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      num
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <styled.span>
+      666
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      str
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <styled.span>
+      "
+      cawabongaaa!
+      "
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      fun
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <styled.span>
+      function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
 }
-</pre>
+    </styled.span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      arr
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <span>
+      <styled.span>
+        [
+      </styled.span>
+      <styled.span>
+        ]
+      </styled.span>
+    </span>
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      obj
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <span>
+      <styled.span>
+        {
+      </styled.span>
+      <styled.div>
+        <styled.span>
+          und
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <styled.span>
+          undefined
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          nil
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <styled.span>
+          null
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          num
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <styled.span>
+          666
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          str
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <styled.span>
+          "
+          cawabongaaa!
+          "
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          fun
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <styled.span>
+          function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+        </styled.span>
+      </styled.div>
+      <styled.div>
+        <styled.span>
+          arr
+        </styled.span>
+        <styled.span>
+          :
+        </styled.span>
+         
+        <span>
+          <styled.span>
+            [
+          </styled.span>
+          <styled.span>
+            ]
+          </styled.span>
+        </span>
+      </styled.div>
+      <styled.span>
+        }
+      </styled.span>
+    </span>
+  </styled.div>
+  <styled.span>
+    }
+  </styled.span>
+</styled.pre>
 `;
 
 exports[`ReactInspect component should render properly if data is null 1`] = `
-<pre>
-  null
-</pre>
+<styled.pre>
+  <styled.span>
+    null
+  </styled.span>
+</styled.pre>
 `;
 
-exports[`ReactInspect component should render properly if data is undefined 1`] = `<pre />`;
+exports[`ReactInspect component should render properly if data is undefined 1`] = `
+<styled.pre>
+  <styled.span>
+    undefined
+  </styled.span>
+</styled.pre>
+`;
