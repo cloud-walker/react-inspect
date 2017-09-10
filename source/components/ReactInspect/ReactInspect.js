@@ -4,25 +4,19 @@ import isCircular from 'just-is-circular'
 
 import stripFunction from '../../utils/stripFunction'
 import Layout from '../Layout'
-import Func from '../Func'
-import Key from '../Key'
 import Level from '../Level'
-import Num from '../Num'
+import Key from '../Key'
 import Punctuation from '../Punctuation'
-import Str from '../Str'
-import Keyword from '../Keyword'
+import Value from '../Value'
 
 const createComponent = (
   {
     inner = false,
     LayoutComponent = Layout,
-    FunctionComponent = Func,
-    KeyComponent = Key,
     LevelComponent = Level,
-    NumberComponent = Num,
     PunctuationComponent = Punctuation,
-    StringComponent = Str,
-    KeywordComponent = Keyword,
+    ValueComponent = Value,
+    KeyComponent = Key,
   } = {},
 ) => ({data}) => {
   if (allPass([complement(is(Function)), is(Object), isCircular])(data)) {
@@ -41,13 +35,10 @@ const createComponent = (
               {createComponent({
                 inner: true,
                 LayoutComponent,
-                FunctionComponent,
                 KeyComponent,
                 LevelComponent,
-                NumberComponent,
                 PunctuationComponent,
-                StringComponent,
-                KeywordComponent,
+                ValueComponent,
               })({data: x})}
             </LevelComponent>
           ))(data)}
@@ -59,7 +50,9 @@ const createComponent = (
     if (is(Function)(data)) {
       return (
         <LayoutComponent>
-          <FunctionComponent>{stripFunction(String(data))}</FunctionComponent>
+          <ValueComponent type="function">
+            {stripFunction(String(data))}
+          </ValueComponent>
         </LayoutComponent>
       )
     }
@@ -72,18 +65,15 @@ const createComponent = (
             keys,
             map(x => (
               <LevelComponent key={x}>
-                <KeywordComponent>{x}</KeywordComponent>
+                <KeyComponent>{x}</KeyComponent>
                 <PunctuationComponent>:</PunctuationComponent>{' '}
                 {createComponent({
                   inner: true,
                   LayoutComponent,
-                  FunctionComponent,
                   KeyComponent,
                   LevelComponent,
-                  NumberComponent,
                   PunctuationComponent,
-                  StringComponent,
-                  KeywordComponent,
+                  ValueComponent,
                 })({data: data[x]})}
               </LevelComponent>
             )),
@@ -96,7 +86,7 @@ const createComponent = (
     if (is(String)(data)) {
       return (
         <LayoutComponent>
-          <StringComponent>"{data}"</StringComponent>
+          <ValueComponent type="string">"{data}"</ValueComponent>
         </LayoutComponent>
       )
     }
@@ -104,14 +94,14 @@ const createComponent = (
     if (is(Number)(data)) {
       return (
         <LayoutComponent>
-          <NumberComponent>{data}</NumberComponent>
+          <ValueComponent type="number">{data}</ValueComponent>
         </LayoutComponent>
       )
     }
 
     return (
       <LayoutComponent>
-        <KeywordComponent>{`${data}`}</KeywordComponent>
+        <ValueComponent type="keyword">{`${data}`}</ValueComponent>
       </LayoutComponent>
     )
   }
@@ -125,13 +115,10 @@ const createComponent = (
             {createComponent({
               inner: true,
               LayoutComponent,
-              FunctionComponent,
               KeyComponent,
               LevelComponent,
-              NumberComponent,
               PunctuationComponent,
-              StringComponent,
-              KeywordComponent,
+              ValueComponent,
             })({data: x})}
           </LevelComponent>
         ))(data)}
@@ -141,7 +128,11 @@ const createComponent = (
   }
 
   if (is(Function)(data)) {
-    return <FunctionComponent>{stripFunction(String(data))}</FunctionComponent>
+    return (
+      <ValueComponent type="function">
+        {stripFunction(String(data))}
+      </ValueComponent>
+    )
   }
 
   if (is(Object)(data)) {
@@ -152,18 +143,15 @@ const createComponent = (
           keys,
           map(x => (
             <LevelComponent key={x}>
-              <KeywordComponent>{x}</KeywordComponent>
+              <KeyComponent>{x}</KeyComponent>
               <PunctuationComponent>:</PunctuationComponent>{' '}
               {createComponent({
                 inner: true,
                 LayoutComponent,
-                FunctionComponent,
                 KeyComponent,
                 LevelComponent,
-                NumberComponent,
                 PunctuationComponent,
-                StringComponent,
-                KeywordComponent,
+                ValueComponent,
               })({data: data[x]})}
             </LevelComponent>
           )),
@@ -174,14 +162,14 @@ const createComponent = (
   }
 
   if (is(String)(data)) {
-    return <StringComponent>"{data}"</StringComponent>
+    return <ValueComponent type="string">"{data}"</ValueComponent>
   }
 
   if (is(Number)(data)) {
-    return <NumberComponent>{data}</NumberComponent>
+    return <ValueComponent type="number">{data}</ValueComponent>
   }
 
-  return <KeywordComponent>{`${data}`}</KeywordComponent>
+  return <ValueComponent type="keyword">{`${data}`}</ValueComponent>
 }
 
 const Component = createComponent()
