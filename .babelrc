@@ -1,4 +1,11 @@
 {
   "presets": [["env", {"modules": false}], "react"],
-  "plugins": ["external-helpers"]
+  "env": {
+    "development": {
+      "plugins": ["external-helpers"]
+    },
+    "test": {
+      "presets": [["env", {"targets": {"node": true}}], "react"]
+    }
+  }
 }
