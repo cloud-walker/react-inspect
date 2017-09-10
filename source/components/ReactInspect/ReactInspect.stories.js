@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react'
 import styled from 'styled-components'
 
 import data from './dataMock'
-import Component, {createReactInspect} from './index'
+import Component from './index'
 import Value from '../Value'
 
 const ValueComponent = styled(Value)`
@@ -23,10 +23,10 @@ const ValueComponent = styled(Value)`
   }};
 `
 
+const CustomComponent = ({data}) => (
+  <Component ValueComponent={ValueComponent} data={data} />
+)
+
 storiesOf(Component.displayName, module)
   .add('default', () => <Component data={data} />)
-  .add('custom presentation', () => {
-    const CustomComponent = createReactInspect({ValueComponent})
-
-    return <CustomComponent data={data} />
-  })
+  .add('custom presentation', () => <CustomComponent data={data} />)

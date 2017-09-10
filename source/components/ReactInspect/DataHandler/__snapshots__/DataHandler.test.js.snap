@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReactInspectDataHandler component should render properly if data is a function 1`] = `
+<styled.span
+  type="function"
+>
+  function fun(a) {
+  var b = 2;
+
+  console.log('foooooo');
+  return a + b;
+}
+</styled.span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is a number 1`] = `
+<styled.span
+  type="keyword"
+>
+  666
+</styled.span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is a string 1`] = `
+<styled.span
+  type="string"
+>
+  "
+  cawabongaaa!
+  "
+</styled.span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is an array 1`] = `
+<span>
+  <styled.span>
+    [
+  </styled.span>
+  <styled.div>
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+    />
+  </styled.div>
+  <styled.div>
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={null}
+    />
+  </styled.div>
+  <styled.div>
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={666}
+    />
+  </styled.div>
+  <styled.div>
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data="cawabongaaa!"
+    />
+  </styled.div>
+  <styled.div>
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={[Function]}
+    />
+  </styled.div>
+  <styled.span>
+    ]
+  </styled.span>
+</span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is an object 1`] = `
+<span>
+  <styled.span>
+    {
+  </styled.span>
+  <styled.div>
+    <styled.span>
+      und
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      nil
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={null}
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      num
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={666}
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      str
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data="cawabongaaa!"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      fun
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={[Function]}
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      arr
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={
+        Array [
+          undefined,
+          null,
+          666,
+          "cawabongaaa!",
+          [Function],
+        ]
+      }
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span>
+      obj
+    </styled.span>
+    <styled.span>
+      :
+    </styled.span>
+     
+    <ReactInspectDataHandler
+      KeyComponent={[Function]}
+      LevelComponent={[Function]}
+      PunctuationComponent={[Function]}
+      ValueComponent={[Function]}
+      data={
+        Object {
+          "arr": Array [
+            undefined,
+            null,
+            666,
+            "cawabongaaa!",
+            [Function],
+          ],
+          "fun": [Function],
+          "nil": null,
+          "num": 666,
+          "str": "cawabongaaa!",
+          "und": undefined,
+        }
+      }
+    />
+  </styled.div>
+  <styled.span>
+    }
+  </styled.span>
+</span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is null 1`] = `
+<styled.span
+  type="keyword"
+>
+  null
+</styled.span>
+`;
+
+exports[`ReactInspectDataHandler component should render properly if data is undefined 1`] = `
+<styled.span
+  type="keyword"
+>
+  undefined
+</styled.span>
+`;
