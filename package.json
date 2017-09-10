@@ -8,12 +8,12 @@
   "scripts": {
     "build": "rollup -c",
     "storybook": "start-storybook -p 9000 -c .storybook",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "prepublish": "npm run build",
+    "publish": "np"
   },
   "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "jsnext:main": "dist/react-inspect.es.js",
   "module": "dist/react-inspect.es.js",
@@ -26,13 +26,7 @@
   "bugs": {
     "url": "https://github.com/cloud-walker/react-inspect/issues"
   },
-  "keywords": [
-    "react",
-    "inspect",
-    "log",
-    "json",
-    "stringify"
-  ],
+  "keywords": ["react", "inspect", "log", "json", "stringify"],
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
