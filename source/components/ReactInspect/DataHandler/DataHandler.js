@@ -1,5 +1,9 @@
 import React from 'react'
-import {is, pipe, addIndex, map, keys} from 'ramda'
+import is from 'ramda/src/is'
+import pipe from 'ramda/src/pipe'
+import addIndex from 'ramda/src/addIndex'
+import map from 'ramda/src/map'
+import keys from 'ramda/src/keys'
 
 import stripFunction from '../../../utils/stripFunction'
 import Level from '../../Level'
