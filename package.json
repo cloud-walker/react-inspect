@@ -13,7 +13,9 @@
     "publish": "np"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "jsnext:main": "dist/react-inspect.es.js",
   "module": "dist/react-inspect.es.js",
@@ -26,7 +28,13 @@
   "bugs": {
     "url": "https://github.com/cloud-walker/react-inspect/issues"
   },
-  "keywords": ["react", "inspect", "log", "json", "stringify"],
+  "keywords": [
+    "react",
+    "inspect",
+    "log",
+    "json",
+    "stringify"
+  ],
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
@@ -40,6 +48,7 @@
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
     "jest": "^21.0.2",
+    "np": "^2.16.0",
     "prettier": "^1.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
