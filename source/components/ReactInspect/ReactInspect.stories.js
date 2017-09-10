@@ -1,13 +1,11 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import styled from 'styled-components'
 
 import data from './dataMock'
 import Component from './index'
 import Value from '../Value'
 
-const ValueComponent = styled(Value)`
-  font-weight: normal;
+const ValueComponent = Value.extend`
   font-style: italic;
   color: ${({type}) => {
     switch (type) {
