@@ -15,3 +15,10 @@ obj.arr = arr
 obj.obj = Object.assign({}, obj)
 
 export default obj
+
+const Circ = function() {
+  this.foo = 'bar'
+  this.circ = this
+}
+
+export const circ = new Circ()

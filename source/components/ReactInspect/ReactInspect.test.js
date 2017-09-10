@@ -1,8 +1,10 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import isCircular from 'just-is-circular'
+import {is} from 'ramda'
 
 import Component from './index'
-import data, {arr, nil, num, fun, und, str} from './dataMock'
+import data, {arr, nil, num, fun, und, str, circ} from './dataMock'
 
 const subject = shallow(<Component />)
 
@@ -36,7 +38,7 @@ describe(`${Component.displayName} component`, () => {
   })
 
   it('should render properly if data is an object', () => {
-    subject.setProps({data: data})
+    subject.setProps({data})
 
     expect(subject).toMatchSnapshot()
   })
@@ -45,5 +47,9 @@ describe(`${Component.displayName} component`, () => {
     subject.setProps({data: arr})
 
     expect(subject).toMatchSnapshot()
+  })
+
+  it('should throw an error if the data is circular', () => {
+    expect(() => subject.setProps({data: circ})).toThrowError()
   })
 })

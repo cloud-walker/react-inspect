@@ -1,5 +1,6 @@
 import React from 'react'
-import {is, pipe, map, keys, addIndex} from 'ramda'
+import {is, pipe, map, keys, addIndex, allPass, complement} from 'ramda'
+import isCircular from 'just-is-circular'
 
 import stripFunction from '../../utils/stripFunction'
 import Layout from '../Layout'
@@ -24,14 +25,18 @@ const createComponent = (
     KeywordComponent = Keyword,
   } = {},
 ) => ({data}) => {
+  if (allPass([complement(is(Function)), is(Object), isCircular])(data)) {
+    throw new Error(
+      'ReactInspect Error: circular data inspection not supported',
+    )
+  }
+
   if (!inner) {
     if (is(Array)(data)) {
       return (
         <LayoutComponent>
-          <PunctuationComponent>
-            {'['}
-          </PunctuationComponent>
-          {addIndex(map)((x, i) =>
+          <PunctuationComponent>{'['}</PunctuationComponent>
+          {addIndex(map)((x, i) => (
             <LevelComponent key={i}>
               {createComponent({
                 inner: true,
@@ -44,11 +49,9 @@ const createComponent = (
                 StringComponent,
                 KeywordComponent,
               })({data: x})}
-            </LevelComponent>,
-          )(data)}
-          <PunctuationComponent>
-            {']'}
-          </PunctuationComponent>
+            </LevelComponent>
+          ))(data)}
+          <PunctuationComponent>{']'}</PunctuationComponent>
         </LayoutComponent>
       )
     }
@@ -56,9 +59,7 @@ const createComponent = (
     if (is(Function)(data)) {
       return (
         <LayoutComponent>
-          <FunctionComponent>
-            {stripFunction(String(data))}
-          </FunctionComponent>
+          <FunctionComponent>{stripFunction(String(data))}</FunctionComponent>
         </LayoutComponent>
       )
     }
@@ -66,12 +67,10 @@ const createComponent = (
     if (is(Object)(data)) {
       return (
         <LayoutComponent>
-          <PunctuationComponent>
-            {'{'}
-          </PunctuationComponent>
+          <PunctuationComponent>{'{'}</PunctuationComponent>
           {pipe(
             keys,
-            map(x =>
+            map(x => (
               <LevelComponent key={x}>
                 <KeywordComponent>{x}</KeywordComponent>
                 <PunctuationComponent>:</PunctuationComponent>{' '}
@@ -86,12 +85,10 @@ const createComponent = (
                   StringComponent,
                   KeywordComponent,
                 })({data: data[x]})}
-              </LevelComponent>,
-            ),
+              </LevelComponent>
+            )),
           )(data)}
-          <PunctuationComponent>
-            {'}'}
-          </PunctuationComponent>
+          <PunctuationComponent>{'}'}</PunctuationComponent>
         </LayoutComponent>
       )
     }
@@ -99,9 +96,7 @@ const createComponent = (
     if (is(String)(data)) {
       return (
         <LayoutComponent>
-          <StringComponent>
-            "{data}"
-          </StringComponent>
+          <StringComponent>"{data}"</StringComponent>
         </LayoutComponent>
       )
     }
@@ -109,9 +104,7 @@ const createComponent = (
     if (is(Number)(data)) {
       return (
         <LayoutComponent>
-          <NumberComponent>
-            {data}
-          </NumberComponent>
+          <NumberComponent>{data}</NumberComponent>
         </LayoutComponent>
       )
     }
@@ -126,10 +119,8 @@ const createComponent = (
   if (is(Array)(data)) {
     return (
       <span>
-        <PunctuationComponent>
-          {'['}
-        </PunctuationComponent>
-        {addIndex(map)((x, i) =>
+        <PunctuationComponent>{'['}</PunctuationComponent>
+        {addIndex(map)((x, i) => (
           <LevelComponent key={i}>
             {createComponent({
               inner: true,
@@ -142,32 +133,24 @@ const createComponent = (
               StringComponent,
               KeywordComponent,
             })({data: x})}
-          </LevelComponent>,
-        )(data)}
-        <PunctuationComponent>
-          {']'}
-        </PunctuationComponent>
+          </LevelComponent>
+        ))(data)}
+        <PunctuationComponent>{']'}</PunctuationComponent>
       </span>
     )
   }
 
   if (is(Function)(data)) {
-    return (
-      <FunctionComponent>
-        {stripFunction(String(data))}
-      </FunctionComponent>
-    )
+    return <FunctionComponent>{stripFunction(String(data))}</FunctionComponent>
   }
 
   if (is(Object)(data)) {
     return (
       <span>
-        <PunctuationComponent>
-          {'{'}
-        </PunctuationComponent>
+        <PunctuationComponent>{'{'}</PunctuationComponent>
         {pipe(
           keys,
-          map(x =>
+          map(x => (
             <LevelComponent key={x}>
               <KeywordComponent>{x}</KeywordComponent>
               <PunctuationComponent>:</PunctuationComponent>{' '}
@@ -182,30 +165,20 @@ const createComponent = (
                 StringComponent,
                 KeywordComponent,
               })({data: data[x]})}
-            </LevelComponent>,
-          ),
+            </LevelComponent>
+          )),
         )(data)}
-        <PunctuationComponent>
-          {'}'}
-        </PunctuationComponent>
+        <PunctuationComponent>{'}'}</PunctuationComponent>
       </span>
     )
   }
 
   if (is(String)(data)) {
-    return (
-      <StringComponent>
-        "{data}"
-      </StringComponent>
-    )
+    return <StringComponent>"{data}"</StringComponent>
   }
 
   if (is(Number)(data)) {
-    return (
-      <NumberComponent>
-        {data}
-      </NumberComponent>
-    )
+    return <NumberComponent>{data}</NumberComponent>
   }
 
   return <KeywordComponent>{`${data}`}</KeywordComponent>
