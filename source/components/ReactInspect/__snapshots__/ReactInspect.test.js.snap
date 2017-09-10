@@ -2,7 +2,9 @@
 
 exports[`ReactInspect component should render properly if data is a function 1`] = `
 <styled.pre>
-  <styled.span>
+  <styled.span
+    type="function"
+  >
     function fun(a) {
   var b = 2;
 
@@ -15,7 +17,9 @@ exports[`ReactInspect component should render properly if data is a function 1`]
 
 exports[`ReactInspect component should render properly if data is a number 1`] = `
 <styled.pre>
-  <styled.span>
+  <styled.span
+    type="number"
+  >
     666
   </styled.span>
 </styled.pre>
@@ -23,7 +27,9 @@ exports[`ReactInspect component should render properly if data is a number 1`] =
 
 exports[`ReactInspect component should render properly if data is a string 1`] = `
 <styled.pre>
-  <styled.span>
+  <styled.span
+    type="string"
+  >
     "
     cawabongaaa!
     "
@@ -37,29 +43,39 @@ exports[`ReactInspect component should render properly if data is an array 1`] =
     [
   </styled.span>
   <styled.div>
-    <styled.span>
+    <styled.span
+      type="keyword"
+    >
       undefined
     </styled.span>
   </styled.div>
   <styled.div>
-    <styled.span>
+    <styled.span
+      type="keyword"
+    >
       null
     </styled.span>
   </styled.div>
   <styled.div>
-    <styled.span>
+    <styled.span
+      type="number"
+    >
       666
     </styled.span>
   </styled.div>
   <styled.div>
-    <styled.span>
+    <styled.span
+      type="string"
+    >
       "
       cawabongaaa!
       "
     </styled.span>
   </styled.div>
   <styled.div>
-    <styled.span>
+    <styled.span
+      type="function"
+    >
       function fun(a) {
   var b = 2;
 
@@ -87,7 +103,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       :
     </styled.span>
      
-    <styled.span>
+    <styled.span
+      type="keyword"
+    >
       undefined
     </styled.span>
   </styled.div>
@@ -99,7 +117,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       :
     </styled.span>
      
-    <styled.span>
+    <styled.span
+      type="keyword"
+    >
       null
     </styled.span>
   </styled.div>
@@ -111,7 +131,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       :
     </styled.span>
      
-    <styled.span>
+    <styled.span
+      type="number"
+    >
       666
     </styled.span>
   </styled.div>
@@ -123,7 +145,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       :
     </styled.span>
      
-    <styled.span>
+    <styled.span
+      type="string"
+    >
       "
       cawabongaaa!
       "
@@ -137,7 +161,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
       :
     </styled.span>
      
-    <styled.span>
+    <styled.span
+      type="function"
+    >
       function fun(a) {
   var b = 2;
 
@@ -159,29 +185,39 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
         [
       </styled.span>
       <styled.div>
-        <styled.span>
+        <styled.span
+          type="keyword"
+        >
           undefined
         </styled.span>
       </styled.div>
       <styled.div>
-        <styled.span>
+        <styled.span
+          type="keyword"
+        >
           null
         </styled.span>
       </styled.div>
       <styled.div>
-        <styled.span>
+        <styled.span
+          type="number"
+        >
           666
         </styled.span>
       </styled.div>
       <styled.div>
-        <styled.span>
+        <styled.span
+          type="string"
+        >
           "
           cawabongaaa!
           "
         </styled.span>
       </styled.div>
       <styled.div>
-        <styled.span>
+        <styled.span
+          type="function"
+        >
           function fun(a) {
   var b = 2;
 
@@ -215,7 +251,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           :
         </styled.span>
          
-        <styled.span>
+        <styled.span
+          type="keyword"
+        >
           undefined
         </styled.span>
       </styled.div>
@@ -227,7 +265,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           :
         </styled.span>
          
-        <styled.span>
+        <styled.span
+          type="keyword"
+        >
           null
         </styled.span>
       </styled.div>
@@ -239,7 +279,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           :
         </styled.span>
          
-        <styled.span>
+        <styled.span
+          type="number"
+        >
           666
         </styled.span>
       </styled.div>
@@ -251,7 +293,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           :
         </styled.span>
          
-        <styled.span>
+        <styled.span
+          type="string"
+        >
           "
           cawabongaaa!
           "
@@ -265,7 +309,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
           :
         </styled.span>
          
-        <styled.span>
+        <styled.span
+          type="function"
+        >
           function fun(a) {
   var b = 2;
 
@@ -287,29 +333,39 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
             [
           </styled.span>
           <styled.div>
-            <styled.span>
+            <styled.span
+              type="keyword"
+            >
               undefined
             </styled.span>
           </styled.div>
           <styled.div>
-            <styled.span>
+            <styled.span
+              type="keyword"
+            >
               null
             </styled.span>
           </styled.div>
           <styled.div>
-            <styled.span>
+            <styled.span
+              type="number"
+            >
               666
             </styled.span>
           </styled.div>
           <styled.div>
-            <styled.span>
+            <styled.span
+              type="string"
+            >
               "
               cawabongaaa!
               "
             </styled.span>
           </styled.div>
           <styled.div>
-            <styled.span>
+            <styled.span
+              type="function"
+            >
               function fun(a) {
   var b = 2;
 
@@ -336,7 +392,9 @@ exports[`ReactInspect component should render properly if data is an object 1`] 
 
 exports[`ReactInspect component should render properly if data is null 1`] = `
 <styled.pre>
-  <styled.span>
+  <styled.span
+    type="keyword"
+  >
     null
   </styled.span>
 </styled.pre>
@@ -344,7 +402,9 @@ exports[`ReactInspect component should render properly if data is null 1`] = `
 
 exports[`ReactInspect component should render properly if data is undefined 1`] = `
 <styled.pre>
-  <styled.span>
+  <styled.span
+    type="keyword"
+  >
     undefined
   </styled.span>
 </styled.pre>
