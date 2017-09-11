@@ -1,6 +1,6 @@
 {
   "name": "@cloudwalker/react-inspect",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Because json stringify is not enough",
   "publishConfig": {
     "access": "public"
@@ -12,7 +12,9 @@
     "prepublish": "rollup -c"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "jsnext:main": "dist/react-inspect.es.js",
   "module": "dist/react-inspect.es.js",
@@ -25,7 +27,13 @@
   "bugs": {
     "url": "https://github.com/cloud-walker/react-inspect/issues"
   },
-  "keywords": ["react", "inspect", "log", "json", "stringify"],
+  "keywords": [
+    "react",
+    "inspect",
+    "log",
+    "json",
+    "stringify"
+  ],
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
