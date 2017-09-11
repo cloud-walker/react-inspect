@@ -10,11 +10,11 @@ const babelConfig = babel({exclude: 'node_modules/**'})
 const external = ['react']
 const input = 'source/index.js'
 
-const umdConfig = {
+const iifeConfig = {
   input,
   output: {
-    file: 'dist/react-inspect.umd.js',
-    format: 'umd',
+    file: 'dist/react-inspect.js',
+    format: 'iife',
   },
   name: 'ReactInspect',
   globals: {
@@ -25,11 +25,11 @@ const umdConfig = {
 }
 
 export default [
-  umdConfig,
-  Object.assign({}, umdConfig, {
+  iifeConfig,
+  Object.assign({}, iifeConfig, {
     output: {
-      file: 'dist/react-inspect.umd.min.js',
-      format: 'umd',
+      file: 'dist/react-inspect.min.js',
+      format: 'iife',
     },
     plugins: [nodeResolve(), commonjs(), babelConfig, uglify()],
   }),
