@@ -2,7 +2,7 @@ import React from 'react'
 import {shallow} from 'enzyme'
 
 import Component from './index'
-import data, {circ} from './dataMock'
+import data, {circ} from '../../mocks/data'
 
 const subject = shallow(<Component data={data} />)
 

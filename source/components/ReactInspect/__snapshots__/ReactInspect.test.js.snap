@@ -3,10 +3,6 @@
 exports[`ReactInspect component should render properly 1`] = `
 <ReactInspectLayout>
   <ReactInspectDataHandler
-    KeyComponent={[Function]}
-    LevelComponent={[Function]}
-    PunctuationComponent={[Function]}
-    ValueComponent={[Function]}
     data={
       Object {
         "arr": Array [

@@ -7,7 +7,10 @@ exports[`ReactInspectDataHandler component should render properly if data is a f
   function fun(a) {
   var b = 2;
 
-  console.log('foooooo');
+  while (a &lt; 10) {
+    a++;
+  }
+
   return a + b;
 }
 </ReactInspectValue>
@@ -35,46 +38,25 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     [
   </ReactInspectPunctuation>
   <ReactInspectLevel>
-    <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
-    />
+    <ReactInspectDataHandler />
   </ReactInspectLevel>
   <ReactInspectLevel>
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={null}
     />
   </ReactInspectLevel>
   <ReactInspectLevel>
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={666}
     />
   </ReactInspectLevel>
   <ReactInspectLevel>
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data="cawabongaaa!"
     />
   </ReactInspectLevel>
   <ReactInspectLevel>
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={[Function]}
     />
   </ReactInspectLevel>
@@ -97,12 +79,7 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       :
     </ReactInspectPunctuation>
      
-    <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
-    />
+    <ReactInspectDataHandler />
   </ReactInspectLevel>
   <ReactInspectLevel>
     <ReactInspectKey>
@@ -113,10 +90,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={null}
     />
   </ReactInspectLevel>
@@ -129,10 +102,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={666}
     />
   </ReactInspectLevel>
@@ -145,10 +114,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data="cawabongaaa!"
     />
   </ReactInspectLevel>
@@ -161,10 +126,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={[Function]}
     />
   </ReactInspectLevel>
@@ -177,10 +138,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={
         Array [
           undefined,
@@ -201,10 +158,6 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
     </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
-      KeyComponent={[Function]}
-      LevelComponent={[Function]}
-      PunctuationComponent={[Function]}
-      ValueComponent={[Function]}
       data={
         Object {
           "arr": Array [
