@@ -9,7 +9,15 @@
     "build": "rollup -c",
     "storybook": "start-storybook -p 9000 -c .storybook",
     "test": "jest",
-    "prepublish": "rollup -c"
+    "prepublish": "rollup -c",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier",
+      "eslint",
+      "git add"
+    ]
   },
   "jest": {
     "snapshotSerializers": [
@@ -41,12 +49,17 @@
   "devDependencies": {
     "@storybook/react": "^3.2.8",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
+    "eslint": "^4.7.0",
+    "eslint-plugin-react": "^7.3.0",
+    "husky": "^0.14.3",
     "jest": "^21.0.2",
+    "lint-staged": "^4.2.1",
     "np": "^2.16.0",
     "prettier": "^1.5.3",
     "react": "^15.6.1",
