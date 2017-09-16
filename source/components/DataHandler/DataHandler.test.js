@@ -2,10 +2,11 @@ import React from 'react'
 import {shallow} from 'enzyme'
 
 import Component from './index'
-import data, {arr, nil, num, fun, und, str} from '../dataMock'
+import data, {arr, nil, num, fun, str} from '../../mocks/data'
 
 const subject = shallow(<Component />)
 
+/* eslint-env jest */
 describe(`${Component.displayName} component`, () => {
   it('should render properly if data is undefined', () => {
     expect(subject).toMatchSnapshot()

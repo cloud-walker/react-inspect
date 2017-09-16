@@ -5,7 +5,10 @@ export const str = 'cawabongaaa!'
 export const fun = a => {
   const b = 2
 
-  console.log('foooooo')
+  while (a < 10) {
+    a++
+  }
+
   return a + b
 }
 const obj = {und, nil, num, str, fun}

@@ -6,6 +6,7 @@ import data, {circ} from './dataMock'
 
 const subject = shallow(<Component data={data} />)
 
+/* eslint-env jest */
 describe(`${Component.displayName} component`, () => {
   it('should render properly', () => {
     expect(subject).toMatchSnapshot()
