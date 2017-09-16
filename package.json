@@ -10,7 +10,6 @@
     "storybook": "start-storybook -p 9000 -c .storybook",
     "test": "jest",
     "prepublish": "rollup -c",
-    "publish": "np",
     "precommit": "lint-staged"
   },
   "lint-staged": {
