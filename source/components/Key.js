@@ -1,6 +1,9 @@
-import styled from 'styled-components'
+import React from 'react'
 
-export default styled.span`
-  font-weight: bold;
-  color: #777;
-`
+const Component = ({children}) => (
+  <span style={{fontWeight: 'bold', color: '#777'}}>{children}</span>
+)
+
+Component.displayName = 'ReactInspectKey'
+
+export default Component

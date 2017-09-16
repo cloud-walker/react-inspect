@@ -75,7 +75,6 @@
   },
   "dependencies": {
     "just-is-circular": "^1.0.0",
-    "ramda": "^0.24.1",
-    "styled-components": "^2.1.2"
+    "ramda": "^0.24.1"
   }
 }

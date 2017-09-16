@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ReactInspectDataHandler component should render properly if data is a function 1`] = `
-<styled.span
+<ReactInspectValue
   type="function"
 >
   function fun(a) {
@@ -10,41 +10,41 @@ exports[`ReactInspectDataHandler component should render properly if data is a f
   console.log('foooooo');
   return a + b;
 }
-</styled.span>
+</ReactInspectValue>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is a number 1`] = `
-<styled.span
+<ReactInspectValue
   type="keyword"
 >
   666
-</styled.span>
+</ReactInspectValue>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is a string 1`] = `
-<styled.span
+<ReactInspectValue
   type="string"
 >
   "
   cawabongaaa!
   "
-</styled.span>
+</ReactInspectValue>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is an array 1`] = `
 <span>
-  <styled.span>
+  <ReactInspectPunctuation>
     [
-  </styled.span>
-  <styled.div>
+  </ReactInspectPunctuation>
+  <ReactInspectLevel>
     <ReactInspectDataHandler
       KeyComponent={[Function]}
       LevelComponent={[Function]}
       PunctuationComponent={[Function]}
       ValueComponent={[Function]}
     />
-  </styled.div>
-  <styled.div>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
     <ReactInspectDataHandler
       KeyComponent={[Function]}
       LevelComponent={[Function]}
@@ -52,8 +52,8 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={null}
     />
-  </styled.div>
-  <styled.div>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
     <ReactInspectDataHandler
       KeyComponent={[Function]}
       LevelComponent={[Function]}
@@ -61,8 +61,8 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={666}
     />
-  </styled.div>
-  <styled.div>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
     <ReactInspectDataHandler
       KeyComponent={[Function]}
       LevelComponent={[Function]}
@@ -70,8 +70,8 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data="cawabongaaa!"
     />
-  </styled.div>
-  <styled.div>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
     <ReactInspectDataHandler
       KeyComponent={[Function]}
       LevelComponent={[Function]}
@@ -79,25 +79,25 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={[Function]}
     />
-  </styled.div>
-  <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectPunctuation>
     ]
-  </styled.span>
+  </ReactInspectPunctuation>
 </span>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is an object 1`] = `
 <span>
-  <styled.span>
+  <ReactInspectPunctuation>
     {
-  </styled.span>
-  <styled.div>
-    <styled.span>
+  </ReactInspectPunctuation>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       und
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -105,14 +105,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       PunctuationComponent={[Function]}
       ValueComponent={[Function]}
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       nil
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -121,14 +121,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={null}
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       num
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -137,14 +137,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={666}
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       str
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -153,14 +153,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data="cawabongaaa!"
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       fun
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -169,14 +169,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
       ValueComponent={[Function]}
       data={[Function]}
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       arr
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -193,14 +193,14 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
         ]
       }
     />
-  </styled.div>
-  <styled.div>
-    <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectLevel>
+    <ReactInspectKey>
       obj
-    </styled.span>
-    <styled.span>
+    </ReactInspectKey>
+    <ReactInspectPunctuation>
       :
-    </styled.span>
+    </ReactInspectPunctuation>
      
     <ReactInspectDataHandler
       KeyComponent={[Function]}
@@ -224,25 +224,25 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
         }
       }
     />
-  </styled.div>
-  <styled.span>
+  </ReactInspectLevel>
+  <ReactInspectPunctuation>
     }
-  </styled.span>
+  </ReactInspectPunctuation>
 </span>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is null 1`] = `
-<styled.span
+<ReactInspectValue
   type="keyword"
 >
   null
-</styled.span>
+</ReactInspectValue>
 `;
 
 exports[`ReactInspectDataHandler component should render properly if data is undefined 1`] = `
-<styled.span
+<ReactInspectValue
   type="keyword"
 >
   undefined
-</styled.span>
+</ReactInspectValue>
 `;

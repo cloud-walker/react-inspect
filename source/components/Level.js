@@ -1,5 +1,9 @@
-import styled from 'styled-components'
+import React from 'react'
 
-export default styled.div`
-  padding-left: 1rem;
-`
+const Component = ({children}) => (
+  <div style={{paddingLeft: '1rem'}}>{children}</div>
+)
+
+Component.displayName = 'ReactInspectLevel'
+
+export default Component

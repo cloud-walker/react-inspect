@@ -1,5 +1,9 @@
-import styled from 'styled-components'
+import React from 'react'
 
-export default styled.span`
-  font-weight: bold;
-`
+const Component = ({children}) => (
+  <span style={{fontWeight: 'bold'}}>{children}</span>
+)
+
+Component.displayName = 'ReactInspectPunctuation'
+
+export default Component

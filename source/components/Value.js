@@ -1,17 +1,27 @@
-import styled from 'styled-components'
+import React from 'react'
 
-export default styled.span`
-  font-weight: bold;
-  color: ${props => {
-    switch (props.type) {
-      case 'string':
-        return 'green'
-      case 'number':
-        return 'orange'
-      case 'function':
-        return 'magenta'
-      default:
-        return 'purple'
-    }
-  }};
-`
+const Component = ({children, type}) => (
+  <span
+    style={{
+      fontWeight: 'bold',
+      color: (() => {
+        switch (type) {
+          case 'string':
+            return 'green'
+          case 'number':
+            return 'orange'
+          case 'function':
+            return 'magenta'
+          default:
+            return 'purple'
+        }
+      })(),
+    }}
+  >
+    {children}
+  </span>
+)
+
+Component.displayName = 'ReactInspectValue'
+
+export default Component
