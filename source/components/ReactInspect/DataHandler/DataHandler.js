@@ -19,7 +19,7 @@ const Component = ({
   data,
 }) => {
   if (is(String)(data)) {
-    return <ValueComponent type="string">"{data}"</ValueComponent>
+    return <ValueComponent type="string">{`"${data}"`}</ValueComponent>
   }
 
   if (is(Function)(data)) {
