@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReactInspectDataHandler component should render properly if data is a function 1`] = `
-<ReactInspectValue
-  type="function"
->
-  function fun(a) {
-  var b = 2;
-
-  while (a &lt; 10) {
-    a++;
-  }
-
-  return a + b;
-}
-</ReactInspectValue>
-`;
+exports[`ReactInspectDataHandler component should render properly if data is a function 1`] = `<ReactInspectCollapseHandler />`;
 
 exports[`ReactInspectDataHandler component should render properly if data is a number 1`] = `
 <ReactInspectValue
@@ -37,29 +23,7 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
   <ReactInspectPunctuation>
     [
   </ReactInspectPunctuation>
-  <ReactInspectLevel>
-    <ReactInspectDataHandler />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectDataHandler
-      data={null}
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectDataHandler
-      data={666}
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectDataHandler
-      data="cawabongaaa!"
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectDataHandler
-      data={[Function]}
-    />
-  </ReactInspectLevel>
+  <ReactInspectCollapseHandler />
   <ReactInspectPunctuation>
     ]
   </ReactInspectPunctuation>
@@ -71,111 +35,7 @@ exports[`ReactInspectDataHandler component should render properly if data is an 
   <ReactInspectPunctuation>
     {
   </ReactInspectPunctuation>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      und
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      nil
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data={null}
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      num
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data={666}
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      str
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data="cawabongaaa!"
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      fun
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data={[Function]}
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      arr
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data={
-        Array [
-          undefined,
-          null,
-          666,
-          "cawabongaaa!",
-          [Function],
-        ]
-      }
-    />
-  </ReactInspectLevel>
-  <ReactInspectLevel>
-    <ReactInspectKey>
-      obj
-    </ReactInspectKey>
-    <ReactInspectPunctuation>
-      :
-    </ReactInspectPunctuation>
-     
-    <ReactInspectDataHandler
-      data={
-        Object {
-          "arr": Array [
-            undefined,
-            null,
-            666,
-            "cawabongaaa!",
-            [Function],
-          ],
-          "fun": [Function],
-          "nil": null,
-          "num": 666,
-          "str": "cawabongaaa!",
-          "und": undefined,
-        }
-      }
-    />
-  </ReactInspectLevel>
+  <ReactInspectCollapseHandler />
   <ReactInspectPunctuation>
     }
   </ReactInspectPunctuation>

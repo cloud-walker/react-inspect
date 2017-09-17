@@ -33,6 +33,7 @@ exports[`ReactInspect component should render properly 1`] = `
         "und": undefined,
       }
     }
+    outer={true}
   />
 </ReactInspectLayout>
 `;

@@ -10,54 +10,82 @@ import Level from '../Level'
 import Punctuation from '../Punctuation'
 import Key from '../Key'
 import Value from '../Value'
+import CollapseHandler from '../CollapseHandler'
 
-const Component = ({data}) => {
-  if (is(String)(data)) {
-    return <Value type="string">{`"${data}"`}</Value>
+const Component = class extends React.Component {
+  static displayName = 'ReactInspectDataHandler'
+  static defaultProps = {
+    outer: false,
   }
 
-  if (is(Function)(data)) {
-    return (
-      <Value type="function">{stripFunction(String(data))}</Value>
-    )
-  }
+  render() {
+    const {data, outer} = this.props
 
-  if (is(Array)(data)) {
-    return (
-      <span>
-        <Punctuation>{'['}</Punctuation>
-        {addIndex(map)((x, i) => (
-          <Level key={i}>
-            <Component data={x} />
+    if (is(String)(data)) {
+      return <Value type="string">{`"${data}"`}</Value>
+    }
+
+    if (is(Function)(data)) {
+      const value = <Value type="function">{stripFunction(String(data))}</Value>
+
+      if (outer) {
+        return value
+      }
+
+      return (
+        <CollapseHandler>
+          {show =>
+            show ? value : {...value, props: {...value.props, children: 'fn'}}}
+        </CollapseHandler>
+      )
+    }
+
+    if (is(Array)(data)) {
+      const value = addIndex(map)((x, i) => (
+        <Level key={i}>
+          <Component data={x} />
+        </Level>
+      ))(data)
+
+      return (
+        <span>
+          <Punctuation>{'['}</Punctuation>
+          {outer ? (
+            value
+          ) : (
+            <CollapseHandler>{show => (show ? value : '...')}</CollapseHandler>
+          )}
+          <Punctuation>{']'}</Punctuation>
+        </span>
+      )
+    }
+
+    if (is(Object)(data)) {
+      const value = pipe(
+        keys,
+        map(x => (
+          <Level key={x}>
+            <Key>{x}</Key>
+            <Punctuation>:</Punctuation> <Component data={data[x]} />
           </Level>
-        ))(data)}
-        <Punctuation>{']'}</Punctuation>
-      </span>
-    )
-  }
+        )),
+      )(data)
 
-  if (is(Object)(data)) {
-    return (
-      <span>
-        <Punctuation>{'{'}</Punctuation>
-        {pipe(
-          keys,
-          map(x => (
-            <Level key={x}>
-              <Key>{x}</Key>
-              <Punctuation>:</Punctuation>{' '}
-              <Component data={data[x]} />
-            </Level>
-          )),
-        )(data)}
-        <Punctuation>{'}'}</Punctuation>
-      </span>
-    )
-  }
+      return (
+        <span>
+          <Punctuation>{'{'}</Punctuation>
+          {outer ? (
+            value
+          ) : (
+            <CollapseHandler>{show => (show ? value : '...')}</CollapseHandler>
+          )}
+          <Punctuation>{'}'}</Punctuation>
+        </span>
+      )
+    }
 
-  return <Value type="keyword">{`${data}`}</Value>
+    return <Value type="keyword">{`${data}`}</Value>
+  }
 }
-
-Component.displayName = 'ReactInspectDataHandler'
 
 export default Component
