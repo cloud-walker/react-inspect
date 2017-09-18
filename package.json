@@ -1,6 +1,6 @@
 {
   "name": "@cloudwalker/react-inspect",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Because json stringify is not enough",
   "publishConfig": {
     "access": "public"
