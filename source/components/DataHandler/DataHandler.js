@@ -19,14 +19,22 @@ const Component = class extends React.Component {
   }
 
   render() {
-    const {data, outer} = this.props
+    const {data, outer, theme} = this.props
 
     if (is(String)(data)) {
-      return <Value type="string">{`"${data}"`}</Value>
+      return <Value type="string" theme={theme}>{`"${data}"`}</Value>
+    }
+
+    if (is(Number)(data)) {
+      return <Value type="number" theme={theme}>{`${data}`}</Value>
     }
 
     if (is(Function)(data)) {
-      const value = <Value type="function">{stripFunction(String(data))}</Value>
+      const value = (
+        <Value type="function" theme={theme}>
+          {stripFunction(String(data))}
+        </Value>
+      )
 
       if (outer) {
         return value
@@ -35,7 +43,9 @@ const Component = class extends React.Component {
       return (
         <CollapseHandler>
           {show =>
-            show ? value : {...value, props: {...value.props, children: 'fn'}}}
+            show
+              ? value
+              : {...value, props: {...value.props, children: 'fn'}}}
         </CollapseHandler>
       )
     }
@@ -43,19 +53,26 @@ const Component = class extends React.Component {
     if (is(Array)(data)) {
       const value = addIndex(map)((x, i) => (
         <Level key={i}>
-          <Component data={x} />
+          <Component data={x} theme={theme} />
         </Level>
       ))(data)
 
       return (
         <span>
-          <Punctuation>{'['}</Punctuation>
+          <Punctuation theme={theme}>{'['}</Punctuation>
           {outer ? (
             value
           ) : (
-            <CollapseHandler>{show => (show ? value : '...')}</CollapseHandler>
+            <CollapseHandler>
+              {show =>
+                show ? (
+                  value
+                ) : (
+                  <Punctuation theme={theme}>...</Punctuation>
+                )}
+            </CollapseHandler>
           )}
-          <Punctuation>{']'}</Punctuation>
+          <Punctuation theme={theme}>{']'}</Punctuation>
         </span>
       )
     }
@@ -65,26 +82,34 @@ const Component = class extends React.Component {
         keys,
         map(x => (
           <Level key={x}>
-            <Key>{x}</Key>
-            <Punctuation>:</Punctuation> <Component data={data[x]} />
+            <Key theme={theme}>{x}</Key>
+            <Punctuation theme={theme}>:</Punctuation>{' '}
+            <Component data={data[x]} theme={theme} />
           </Level>
         )),
       )(data)
 
       return (
         <span>
-          <Punctuation>{'{'}</Punctuation>
+          <Punctuation theme={theme}>{'{'}</Punctuation>
           {outer ? (
             value
           ) : (
-            <CollapseHandler>{show => (show ? value : '...')}</CollapseHandler>
+            <CollapseHandler>
+              {show =>
+                show ? (
+                  value
+                ) : (
+                  <Punctuation theme={theme}>...</Punctuation>
+                )}
+            </CollapseHandler>
           )}
-          <Punctuation>{'}'}</Punctuation>
+          <Punctuation theme={theme}>{'}'}</Punctuation>
         </span>
       )
     }
 
-    return <Value type="keyword">{`${data}`}</Value>
+    return <Value type="keyword" theme={theme}>{`${data}`}</Value>
   }
 }
 

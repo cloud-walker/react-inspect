@@ -4,7 +4,7 @@ exports[`ReactInspectDataHandler component should render properly if data is a f
 
 exports[`ReactInspectDataHandler component should render properly if data is a number 1`] = `
 <ReactInspectValue
-  type="keyword"
+  type="number"
 >
   666
 </ReactInspectValue>

@@ -7,16 +7,18 @@ import isCircular from 'just-is-circular'
 import DataHandler from '../DataHandler'
 import Layout from '../Layout'
 
-const Component = ({data}) => {
-  if (allPass([complement(is(Function)), is(Object), isCircular])(data)) {
+const Component = ({data, theme}) => {
+  if (
+    allPass([complement(is(Function)), is(Object), isCircular])(data)
+  ) {
     throw new Error(
       'ReactInspect Error: circular data inspection not supported',
     )
   }
 
   return (
-    <Layout>
-      <DataHandler data={data} outer />
+    <Layout theme={theme}>
+      <DataHandler data={data} outer theme={theme} />
     </Layout>
   )
 }
