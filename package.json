@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "eslint": "eslint source/**",
+    "lint:scripts": "eslint source/**",
     "storybook": "start-storybook -p 9000 -c .storybook",
     "test": "jest",
     "prepublish": "rollup -c",
